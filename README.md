@@ -5,7 +5,7 @@
 1. Clone the repo
 
 ```
-git clone https://github.com/nikolalsvk/dotfiles.git
+git clone https://github.com/esoto/dotfiles
 ```
 
 2. Get into the repo and run the install script
