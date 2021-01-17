@@ -1,13 +1,5 @@
 #! /bin/sh
 
-echo "Checking for oh-my-zsh"
-if [ -f ~/.zshrc ]; then
-    echo "oh-my-zsh installed"
-else
-    echo "installing oh-my-zsh"
-    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-fi
-
 echo "Checking for homebrew"
 if [[ $(command -v brew) == "" ]]; then
     echo "installing homebrew"
