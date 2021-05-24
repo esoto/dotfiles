@@ -9,12 +9,14 @@ Plug 'leafgarland/typescript-vim' " TypeScript syntax
 Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'jparise/vim-graphql'        " GraphQL syntax
 Plug 'styled-components/vim-styled-components'
+Plug 'leafOfTree/vim-vue-plugin'
 
 Plug 'vim-airline/vim-airline'    " Vim powerline
 
 Plug 'scrooloose/nerdtree'
 
 Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-endwise'          " Autocomplete end after a do
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -97,23 +99,26 @@ map <down> <nop>
 map <left> <nop>
 map <right> <nop>
 
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <silent><leader>. :nohlsearch<CR>
+
+set hlsearch
+nnoremap <C-s> gg=G <CR>
 
 nnoremap ; :
 
-"set winwidth=90
+set winwidth=90
 
-"set winminwidth=15
+set winminwidth=15
 
-"set winheight=5
+set winheight=5
 
-"set winminheight=5
+set winminheight=5
 
-"set winheight=999
+set winheight=999
 
 " Comment lines in files
-nnoremap <leader>. :call NERDComment(0,"toggle")<CR>
-vnoremap <leader>,. :call NERDComment(0,"toggle")<CR>
+nnoremap <leader>m :call NERDComment(0,"toggle")<CR>
+vnoremap <leader>m :call NERDComment(0,"toggle")<CR>
 
 " CoC extensions
 let g:coc_global_extensions = ['coc-solargraph', 'coc-tsserver', 'coc-json']
@@ -138,3 +143,7 @@ nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
 nmap <leader>qf  <Plug>(coc-fix-current)
 
+set tabstop=1
+set softtabstop=2
+set shiftwidth=2
+set expandtab
