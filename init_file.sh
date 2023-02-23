@@ -3,7 +3,7 @@
 echo "Checking for homebrew"
 if [[ $(command -v brew) == "" ]]; then
     echo "installing homebrew"
-    bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 else
     echo "homebrew installed"
 fi
@@ -11,7 +11,7 @@ fi
 echo "Checking for postgres"
 if [[ $(command -v postgres) == "" ]]; then
     echo "installing postgres"
-    brew install postgresql
+    brew install postgresql@13
 else
     echo "postgres installed"
 fi

@@ -37,7 +37,7 @@ print_cyan "Checking if zsh is installed"
 if `which zsh`.include? "not found"
   print_red "Nope, installing zsh"
   `sudo apt-get install zsh`
-  `sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
+  `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
 else
   print_green "You already have zsh, awesome!"
 end
